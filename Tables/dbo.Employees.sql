@@ -30,3 +30,5 @@ CREATE NONCLUSTERED INDEX [PostalCode] ON [dbo].[Employees] ([PostalCode]) ON [P
 GO
 ALTER TABLE [dbo].[Employees] ADD CONSTRAINT [FK_Employees_Employees] FOREIGN KEY ([ReportsTo]) REFERENCES [dbo].[Employees] ([EmployeeID])
 GO
+GRANT SELECT ON  [dbo].[Employees] TO [PIPOS_USER]
+GO
